@@ -129,9 +129,10 @@ function UpdateGame()
 {
 	if (gameState != GAME_OVER)
 	{
-		ResetGame();
+		snail1.Move();
+		snail2.Move();
 		DrawGame();
-		OnLoad();
+		checkFinish();
 	}
 }
 
