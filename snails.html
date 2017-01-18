@@ -129,6 +129,8 @@ function UpdateGame()
 {
 	if (gameState != RACE_WON)
 	{
+		snail1.Move();
+		snail2.Move();
 		DrawGame();
 		checkFinish();
 	}
