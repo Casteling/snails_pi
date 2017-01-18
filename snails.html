@@ -67,9 +67,9 @@ function OnLoad()
 	snail3Img.src = "snail3.png";
 	
 	//create snails
-	snail1 = new Snail(50,50,snail1Img);
-	snail2 = new Snail(50,150,snail2Img);
-	snail3 = new Snail(50,250,snail3Img);
+	snail1 = new Snail(550,50,snail1Img);
+	snail2 = new Snail(550,150,snail2Img);
+	snail3 = new Snail(550,250,snail3Img);
 	
 	//setup key press functions
 	
@@ -130,7 +130,6 @@ function UpdateGame()
 	if (gameState != GAME_OVER)
 	{
 		ResetGame();
-		OnLoad();
 		DrawGame();
 	}
 }
