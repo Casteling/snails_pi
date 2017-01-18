@@ -55,7 +55,12 @@ class Snail
 
 function reset()
 {
+	gameState = PLAYING;
+	snail1.reset();
+	snail2.reset();
+	snail3.reset();
 	
+	audio.play();
 }
 
 function OnLoad()
@@ -133,7 +138,7 @@ function UpdateGame()
 		snail2.Move();
 		DrawGame();
 		checkFinish();
-		ResetGame();
+		reset();
 	}
 }
 
