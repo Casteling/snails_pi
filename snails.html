@@ -99,7 +99,7 @@ function OnLoad()
 	}//end keyup
 
 	DrawGame();
-	setInterval(Timer, 500);
+	setInterval(Timer, 250);
 }
 
 function Timer()
@@ -133,6 +133,7 @@ function UpdateGame()
 		snail2.Move();
 		DrawGame();
 		checkFinish();
+		ResetGame();
 	}
 }
 
