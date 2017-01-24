@@ -6,7 +6,11 @@ var backgroundImg = new Image();
 var snail1Img = new Image();
 var snail2Img = new Image();
 var snail3Img = new Image();
-
+var winning1Img = new Image();
+var winning2Img = new Image();
+var winning3Img = new Image();
+var winnningImg; //which img to show	
+	
 var PLAYING = 0;
 var GAME_OVER = 1;
 var gameState = GAME_OVER;
@@ -66,6 +70,11 @@ function OnLoad()
 	snail2Img.src = "snail2.png";
 	snail3Img.src = "snail3.png";
 	
+	//load winning images
+	winning1Img.src = "winning1.png";
+	winning2Img.src = "winning2.png";
+	winning3Img.src = "winning3.png";
+	
 	//create snails
 	snail1 = new Snail(50,50,snail1Img);
 	snail2 = new Snail(50,150,snail2Img);
@@ -122,7 +131,13 @@ function DrawGame()
 	
 	snail1.Draw(ctx);
 	snail2.Draw(ctx);
-	snail3.Draw(ctx);	
+	snail3.Draw(ctx);
+	
+	if (gameState == GAME_OVER)
+	{
+		ctx.drawImage(400,150,winningImg);
+	}
+	
 }
 
 function UpdateGame()
@@ -155,7 +170,20 @@ function checkFinish()
 {
 	if (snail1.GetX() > finish_x || snail2.GetX() > finish_x || snail3.GetX() > finish_x)
 	{
-		alert("Race won!");
+		//alert("Race won!");
+		
+		if (snail1.GetX() > snail2.GetX() && snail1.GetX() > snail3.GetX())
+		{
+		  winningImg = winning1Image;
+		}
+		else if (snail2.GetX() > snail1.GetX() && snail2.GetX() > snail3.GetX())
+		{
+		  winningImg = winning2Image;
+		}
+		else if (snail13.GetX() > snail1.GetX() && snail3.GetX() > snail2.GetX())
+		{
+		 winningImg = winning3Image;  
+		}
 		gameState = RACE_WON;
 	}
 }
