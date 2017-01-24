@@ -174,15 +174,15 @@ function checkFinish()
 		
 		if (snail1.GetX() > snail2.GetX() && snail1.GetX() > snail3.GetX())
 		{
-		  winningImg = winning1Image;
+		  winningImg = winning1Img;
 		}
 		else if (snail2.GetX() > snail1.GetX() && snail2.GetX() > snail3.GetX())
 		{
-		  winningImg = winning2Image;
+		  winningImg = winning2Img;
 		}
 		else if (snail13.GetX() > snail1.GetX() && snail3.GetX() > snail2.GetX())
 		{
-		 winningImg = winning3Image;  
+		 winningImg = winning3Img;  
 		}
 		gameState = RACE_WON;
 	}
