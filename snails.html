@@ -135,7 +135,10 @@ function DrawGame()
 	
 	if (gameState == GAME_OVER)
 	{
-		ctx.drawImage(400,150,winningImg);
+		if (winningImg!=null)
+		{
+			ctx.drawImage(400,150,winningImg);
+		}
 	}
 	
 }
