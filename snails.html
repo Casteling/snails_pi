@@ -10,7 +10,7 @@ var winning1Img = new Image();
 var winning2Img = new Image();
 var winning3Img = new Image();
 var winningImg; //which img to show
-var titleImg = new Image();
+//var titleImg = new Image();
 var bannerImg = new Image();
 	
 var PLAYING = 0;
@@ -74,7 +74,7 @@ function OnLoad()
 	
 	
 	//setup title screen and/or banner
-	titleImg.src = "TitleScreen.png"; 
+	//titleImg.src = "TitleScreen.png"; 
 	bannerImg.src = "Banner.png";
 	
 	//load winning images
@@ -134,14 +134,14 @@ function DrawGame()
 	//clobber the whole canvas
 	ctx.fillRect(0,0, canvas.width, canvas.height);
 	
-	ctx.drawImage(titleImg, 0, 0);
+	//ctx.drawImage(titleImg, 0, 0);
 	ctx.drawImage(bannerImg, 0, 0);
 	ctx.drawImage(backgroundImg, 0, 143);
 	
 	snail1.Draw(ctx);
 	snail2.Draw(ctx);
 	snail3.Draw(ctx);
-	titleImg.Draw(ctx);
+	//titleImg.Draw(ctx);
 	bannerImg.Draw(ctx);
 	
 	if (gameState == GAME_OVER)
