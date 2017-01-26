@@ -11,6 +11,7 @@ var winning2Img = new Image();
 var winning3Img = new Image();
 var winningImg; //which img to show
 var titleImg = new Image();
+var bannerImg = new Image();
 	
 var PLAYING = 0;
 var GAME_OVER = 1;
@@ -74,6 +75,7 @@ function OnLoad()
 	
 	//setup title screen and/or banner
 	titleImg.src = "TitleScreen.png"; 
+	bannerImg.src = "Banner.png";
 	
 	//load winning images
 	winning1Img.src = "winning1.png";
@@ -132,12 +134,13 @@ function DrawGame()
 	//clobber the whole canvas
 	ctx.fillRect(0,0, canvas.width, canvas.height);
 	
-	ctx.drawImage(backgroundImg, 0, 0);
+	ctx.drawImage(bannerImg, 0, 0);
+	ctx.drawImage(backgroundImg, 0, 143);
 	
 	snail1.Draw(ctx);
 	snail2.Draw(ctx);
 	snail3.Draw(ctx);
-	ctx.drawImage(titleImg, 0, 0);
+	titleImg.Draw(ctx);
 	
 	if (gameState == GAME_OVER)
 	{
@@ -200,7 +203,7 @@ function checkFinish()
 </script>
 <body onLoad="javascript:OnLoad();">
 <center>
-<canvas id="canvas" width="799" height="300" style="background:#000000">
+<canvas id="canvas" width="799" height="442" style="background:#000000">
 </canvas>
 <button onClick = "ResetGame();">
 reset 
