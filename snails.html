@@ -9,7 +9,8 @@ var snail3Img = new Image();
 var winning1Img = new Image();
 var winning2Img = new Image();
 var winning3Img = new Image();
-var winningImg; //which img to show	
+var winningImg; //which img to show
+var titleImg = new Image();
 	
 var PLAYING = 0;
 var GAME_OVER = 1;
@@ -69,6 +70,10 @@ function OnLoad()
 	snail1Img.src = "moose 1.png";
 	snail2Img.src = "moose2.png";
 	snail3Img.src = "moose3.png";
+	
+	
+	//setup title screen and/or banner
+	titleImg.src = "TitleScreen.png"; 
 	
 	//load winning images
 	winning1Img.src = "winning1.png";
@@ -132,6 +137,7 @@ function DrawGame()
 	snail1.Draw(ctx);
 	snail2.Draw(ctx);
 	snail3.Draw(ctx);
+	titleImg.Draw(ctx);
 	
 	if (gameState == GAME_OVER)
 	{
