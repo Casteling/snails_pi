@@ -137,7 +137,7 @@ function DrawGame()
 	snail1.Draw(ctx);
 	snail2.Draw(ctx);
 	snail3.Draw(ctx);
-	titleImg.Draw(ctx);
+	ctx.drawImage(titleImg, 0, 0);
 	
 	if (gameState == GAME_OVER)
 	{
