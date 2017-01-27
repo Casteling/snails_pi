@@ -142,11 +142,11 @@ function DrawGame()
 	snail2.Draw(ctx);
 	snail3.Draw(ctx);
 	
-	if (gameState == RACE_WON)
+	if (gameState == GAME_OVER)
 	{
 		if (winningImg!= null)
 		{
-			ctx.drawImage(winningImg,500,150);
+			ctx.drawImage(winningImg,150,150);
 		}
 	}
 	
