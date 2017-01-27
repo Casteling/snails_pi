@@ -146,7 +146,7 @@ function DrawGame()
 	{
 		if (winningImg!= null)
 		{
-			ctx.drawImage(winningImg,150,150);
+			ctx.drawImage(winningImg, canvas.Width/2 - winningImg.Width/2, 221);
 		}
 	}
 	
@@ -192,7 +192,7 @@ function checkFinish()
 		{
 		  winningImg = winning2Img;
 		}
-		else if (snail13.GetX() > snail1.GetX() && snail3.GetX() > snail2.GetX())
+		else  
 		{
 		 winningImg = winning3Img; 
 		}
