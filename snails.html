@@ -162,10 +162,7 @@ function UpdateGame()
 		DrawGame();
 		checkFinish();
 	}
-	else 
-	{
-		setTimeout(location.replace("TitleScreen.html"),30000);
-	}
+		
 }
 
 function MovePlayer()
@@ -175,12 +172,13 @@ function MovePlayer()
 
 function ResetGame()
 {
-	gameState = PLAYING;
-	snail1.reset();
-	snail2.reset();
-	snail3.reset();
+	location.replace("TitleScreen.html");
+	//gameState = PLAYING;
+	//snail1.reset();
+	//snail2.reset();
+	//snail3.reset();
 	
-	audio.play();
+	//audio.play();
 }
 
 function checkFinish()
