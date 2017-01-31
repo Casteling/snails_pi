@@ -20,7 +20,17 @@ var RACE_WON = 2;
 	
 var SINGLE = 0;
 var MULTI = 1;
-var gameType = SINGLE;
+var gameType = 
+<?php
+if ($_GET["gameType"] != "")
+{
+	echo($_GET["gameType"] . ";");
+}
+else
+{
+	echo("SINGLE;");
+}
+?>
 
 var snail1;
 var snail2;
@@ -161,7 +171,7 @@ function UpdateGame()
 {
    if (gameState != RACE_WON)
    { 
-	if {gameType == SINGLE) 
+	if (gameType == SINGLE) 
    	{	
 		snail1.Move();
 	   	snail2.Move();
