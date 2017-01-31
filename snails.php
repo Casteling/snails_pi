@@ -17,6 +17,10 @@ var PLAYING = 0;
 var GAME_OVER = 1;
 var gameState = GAME_OVER;
 var RACE_WON = 2;
+	
+var SINGLE = 0;
+var MULTI = 1;
+var gameType = SINGLE;
 
 var snail1;
 var snail2;
@@ -155,13 +159,22 @@ function DrawGame()
 
 function UpdateGame()
 {
-	if (gameState != RACE_WON)
-	{
+   if (gameState != RACE_WON)
+   { 
+	if {gameType == SINGLE) 
+   	{	
 		snail1.Move();
-		snail2.Move();
+	   	snail2.Move();
 		DrawGame();
 		checkFinish();
-	}
+  	}
+   	else if (gameType == MULTI)
+  	{
+		snail1.Move();
+		DrawGame();
+		CheckFinish();
+   	}
+   }
 		
 }
 
