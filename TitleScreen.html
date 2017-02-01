@@ -1,25 +1,24 @@
 <html>
 <head>
  <script language = "javascript"> 
-    window.onkeyup = function(e) {
-	
-		{
-			var key = e.keyCode ? e.keyCode : e.which;
+ window.onkeyup = function(e) {
+{
+ var key = e.keyCode ? e.keyCode : e.which;
 			
-         if (key == 90 || key == 122) 
-         { //'z'
-            location.replace("snail.php?gameType=MULTI");
-			} 
-         else if (key == 86) 
-         { //'v'
-				location.replace("snail.php?gameType=SINGLE");
-			}
-			else if (key == 49) 
-         {
-				location.replace("help.html");
-			}
-		}
-	}//end keyup
+  if (key == 90 || key == 122) 
+  { //'z'
+    location.replace("snails.php?gameType=MULTI");
+  } 
+  else if (key == 86) 
+  { //'v'
+    location.replace("snails.php?gameType=SINGLE");
+  }
+  else if (key == 49) 
+  {
+     location.replace("help.html");
+  }
+ }
+}//end keyup
  </script>
 </head>
 
