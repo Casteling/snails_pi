@@ -233,7 +233,7 @@ function checkFinish()
 		{
 		  winningImg = winning2Img;
 		}
-		else  
+		else if (snail3.GetX() > snail1.GetX() && snail3.GetX() > snail2.GetX())
 		{
 		 winningImg = winning3Img; 
 		}
