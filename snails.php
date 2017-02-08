@@ -18,9 +18,9 @@ var GAME_OVER = 1;
 var gameState = GAME_OVER;
 var RACE_WON = 2;
 
-var SLOW = 5;
-var MEDIUM = 8;
-var FAST = 20;
+//var SLOW = 5;
+//var MEDIUM = 8;
+//var FAST = 20;
 var speed =
 <?php
 if ($_GET["speed"] != "")
@@ -29,7 +29,7 @@ if ($_GET["speed"] != "")
 }
 else
 {
-	echo("SLOW;");
+	echo("5;");
 }
 ?>
     
