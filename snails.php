@@ -17,7 +17,22 @@ var PLAYING = 0;
 var GAME_OVER = 1;
 var gameState = GAME_OVER;
 var RACE_WON = 2;
-	
+
+var SLOW = 5;
+var MEDIUM = 8;
+var FAST = 10;
+var speed =
+<?php
+if ($_GET["speed"] != "")
+{
+	echo($_GET["speed"] . ";");
+}
+else
+{
+	echo("SLOW;");
+}
+?>
+    
 var SINGLE = 0;
 var MULTI = 1;
 var gameType = 
@@ -55,7 +70,7 @@ class Snail
 		}
 		//functions
 		this.Move = function () {
-			x += Math.random() * 3 + 5;
+			x += Math.random() * 3 + speed;
 		}
 		
 		this.reset = function ()
