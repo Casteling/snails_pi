@@ -223,7 +223,7 @@ function checkFinish()
 {
 	if (snail1.GetX() > finish_x || snail2.GetX() > finish_x || snail3.GetX() > finish_x)
 	{
-		alert("Race won!");
+		//alert("Race won!");
 		
 		if (snail1.GetX() > snail2.GetX() && snail1.GetX() > snail3.GetX())
 		{
