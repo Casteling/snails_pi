@@ -113,7 +113,7 @@ function OnLoad()
 			} else if (key == 90 || key == 122) { //'z'
 				snail1.Move();
 				checkFinish();
-			} else if (key == 86) { //'v'
+			} else if (key == 88) { //'x'
 				snail2.Move();
 				checkFinish();
 			} else if (key == 71) { //'g'
