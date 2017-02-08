@@ -1,17 +1,24 @@
 <html>
 <head>
  <script language = "javascript"> 
+
+var speed = SLOW;
+
+function SetSpeed(newspeed)
+{
+   speed = newspeed;
+}
  window.onkeyup = function(e) {
 {
  var key = e.keyCode ? e.keyCode : e.which;
 			
   if (key == 90 || key == 122) 
   { //'z'
-    location.replace("snails.php?gameType=MULTI");
+    location.replace("snails.php?gameType=MULTI&speed=" + speed);
   } 
   else if (key == 86) 
   { //'v'
-    location.replace("snails.php?gameType=SINGLE");
+    location.replace("snails.php?gameType=SINGLE&speed="+ speed);
   }
   else if (key == 49) 
   {
@@ -28,6 +35,22 @@
 <img src ="TitleScreen.png">
 
 </center>
+
+<button onCLick = "SetSpeed(SLOW)">
+button_slow.png
+</button>
+
+<center>
+<button onCLick = "SetSpeed(MEDIUM)">
+button_medium.png
+</button>
+</center>
+
+<right>
+<button onCLick = "SetSpeed(FAST)">
+button_fast.png
+</button>
+</right>
  </body>
 </html>
 
