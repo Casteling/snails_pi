@@ -197,7 +197,7 @@ function UpdateGame()
   	{
 		snail1.Move();
 		DrawGame();
-		CheckFinish();
+		checkFinish();
    	}
    }
 		
