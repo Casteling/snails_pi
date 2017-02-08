@@ -20,7 +20,7 @@ var RACE_WON = 2;
 
 var SLOW = 5;
 var MEDIUM = 8;
-var FAST = 10;
+var FAST = 20;
 var speed =
 <?php
 if ($_GET["speed"] != "")
