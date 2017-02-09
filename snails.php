@@ -246,12 +246,7 @@ function checkFinish()
 <center>
 <canvas id="canvas" width="799" height="442" style="background:#000000">
 </canvas>
-<button onClick = "ResetGame();">
-reset 
-</button>
 </center>
 
-
-</div>
 </body>
 </html>
