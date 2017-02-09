@@ -10,7 +10,6 @@ var winning1Img = new Image();
 var winning2Img = new Image();
 var winning3Img = new Image();
 var winningImg; //which img to show
-//var titleImg = new Image();
 var bannerImg = new Image();
 	
 var PLAYING = 0;
@@ -18,9 +17,6 @@ var GAME_OVER = 1;
 var gameState = GAME_OVER;
 var RACE_WON = 2;
 
-//var SLOW = 5;
-//var MEDIUM = 8;
-//var FAST = 20;
 var speed =
 <?php
 if ($_GET["speed"] != "")
@@ -65,11 +61,13 @@ class Snail
 		this.y = y;
 		this.img = img;
 		
-		this.Draw = function (context) {
+		this.Draw = function (context)
+		{
 			context.drawImage(img, x - img.width/2, y - img.height/2);
 		}
 		//functions
-		this.Move = function () {
+		this.Move = function () 
+		{
 			x += Math.random() * 3 + speed;
 		}
 		
@@ -88,10 +86,8 @@ class Snail
 //top level functions
 //use this to "construct" the program
 
-function reset()
-{
- 
-}
+//function reset()
+
 
 function OnLoad()
 {
@@ -102,8 +98,7 @@ function OnLoad()
 	snail3Img.src = "moose3.png";
 	
 	
-	//setup title screen and/or banner
-	//titleImg.src = "TitleScreen.png"; 
+	//setup banner
 	bannerImg.src = "Banner.png";
 	
 	//load winning images
@@ -116,31 +111,37 @@ function OnLoad()
 	snail2 = new Snail(50,292,snail2Img);
 	snail3 = new Snail(50,392,snail3Img);
 	
-	//setup key press functions
-	
-	window.onkeyup = function(e) {
+	//setup key press functions	
+	window.onkeyup = function(e) 
+	{
 	
 		//if (gameState != GAME_OVER)
 		{
 			var key = e.keyCode ? e.keyCode : e.which;
 
-			if (key == 68) { //'d'
-			} else if (key == 90 || key == 122) { //'z'
+			if (key == 68) 
+			{ //'d'
+			} 
+			else if (key == 90 || key == 122)
+			{ //'z'
 				snail1.Move();
 				checkFinish();
-			} else if (key == 88) { //'x'
+			} 
+			else if (key == 88) 
+			{ //'x'
 				snail2.Move();
 				checkFinish();
-			} else if (key == 71) { //'g'
+			} 
+			else if (key == 71) 
+			{ //'g'
 				snail3.Move();
 				checkFinish();
 			}
-			else if (key == 49) {
+			else if (key == 49) 
+			{//'1'
 				ResetGame();
 			}
 		}
-		//else { ResetGame();
-		//}
 	}//end keyup
 
 	DrawGame();
@@ -163,7 +164,6 @@ function DrawGame()
 	//clobber the whole canvas
 	ctx.fillRect(0,0, canvas.width, canvas.height);
 	
-	//ctx.drawImage(titleImg, 0, 0);
 	ctx.drawImage(bannerImg, 0, 0);
 	ctx.drawImage(backgroundImg, 0, 143);
 	
