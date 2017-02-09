@@ -1,4 +1,5 @@
 <!-- Snail project -->
+<!--Changed squiggly braquets down one on key code and deleted the commented out code for the titlescreen image--> 
 <html>
 <script language="javascript">
 var canvas;
