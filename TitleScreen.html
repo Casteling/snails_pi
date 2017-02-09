@@ -1,6 +1,6 @@
 <html>
 <head>
- <script language = "javascript"> 
+<script language = "javascript"> 
 
 var speed = 5;
 
@@ -8,7 +8,8 @@ function SetSpeed(newspeed)
 {
    speed = newspeed;
 }
- window.onkeyup = function(e) {
+ window.onkeyup = function(e) 
+{
 {
  var key = e.keyCode ? e.keyCode : e.which;
 			
@@ -26,7 +27,8 @@ function SetSpeed(newspeed)
   }
  }
 }//end keyup
- </script>
+ 
+</script>
 </head>
 
 <body>
@@ -34,24 +36,18 @@ function SetSpeed(newspeed)
 <center>
 <img src ="TitleScreen.png">
 
-</center>
- <center>
 <button onClick = "SetSpeed(5);">
 <img src = "button_slow.png">
 </button>
-
-
 
 <button onClick = "SetSpeed(8);">
 <img src ="button_medium.png">
 </button>
 
-
-
 <button onClick = "SetSpeed(20);">
 <img src ="button_fast.png">
 </button>
 </center>
- </body>
+</body>
 </html>
 
