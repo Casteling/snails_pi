@@ -120,8 +120,8 @@ function OnLoad()
 		{
 			var key = e.keyCode ? e.keyCode : e.which;
 
-			if (key == 68) 
-			{ //'d'
+			if (key == 71) 
+			{ //'g'
 			} 
 			else if (key == 90 || key == 122)
 			{ //'z'
