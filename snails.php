@@ -133,8 +133,8 @@ function OnLoad()
 				snail2.Move();
 				checkFinish();
 			} 
-			else if (key == 71) 
-			{ //'g'
+			else if (key == 68) 
+			{ //'d'
 				snail3.Move();
 				checkFinish();
 			}
