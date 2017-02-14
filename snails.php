@@ -120,10 +120,11 @@ function OnLoad()
 		{
 			var key = e.keyCode ? e.keyCode : e.which;
 
-			if (key == 71) 
-			{ //'g'
-			} 
-			else if (key == 90 || key == 122)
+			//if (key == 71) 
+			//{ //'g'
+			//} 
+			//else
+			if (key == 90 || key == 122)
 			{ //'z'
 				snail1.Move();
 				checkFinish();
