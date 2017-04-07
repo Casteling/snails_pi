@@ -17,11 +17,11 @@ function SetSpeed(newspeed)
 			
   if (key == 90 || key == 122) 
   { //'z'
-    location.replace("snails.php?gameType=MULTI&speed=" + speed);
+    location.replace("snails.php?gameState=PLAYING&gameType=MULTI&speed=" + speed);
   } 
   else if (key == 86) 
   { //'v'
-    location.replace("snails.php?gameType=SINGLE&speed=" + speed);
+    location.replace("snails.php?gameState=PLAYING&gameType=SINGLE&speed=" + speed);
   }
   else if (key == 49) 
   {
