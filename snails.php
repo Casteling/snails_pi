@@ -15,7 +15,7 @@ var bannerImg = new Image();
 	
 var PLAYING = 0;
 var GAME_OVER = 1;
-var gameState = GAME_OVER;
+var gameState = PLAYING;
 var RACE_WON = 2;
 
 var speed =
