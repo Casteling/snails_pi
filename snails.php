@@ -111,11 +111,10 @@ function OnLoad()
 	snail1 = new Snail(50,192,snail1Img);
 	snail2 = new Snail(50,292,snail2Img);
 	snail3 = new Snail(50,392,snail3Img);
-	
-	if (gameState == PLAYING)
-	{	
-		//setup key press functions	
-		window.onkeyup = function(e) 
+
+	window.onkeyup = function(e) 
+	{
+		if (gameState == PLAYING)
 		{
 			var key = e.keyCode ? e.keyCode : e.which;
 
@@ -138,16 +137,17 @@ function OnLoad()
 				snail3.Move();
 				checkFinish();
 			}
-		}		
-	}//end keyup
-	
-	window.onkeyup = function(e) 
-	{
+		}	
+		
 		if (key == 49) 
 		{//'1'
 		 ResetGame();	
 		}
-	}
+	
+	}//end keyup
+	
+	
+		
 
 	DrawGame();
 	setInterval(Timer, 750);
