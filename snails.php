@@ -116,7 +116,7 @@ function OnLoad()
 	window.onkeyup = function(e) 
 	{
 	
-		//if (gameState != GAME_OVER)
+		if (gameState != GAME_OVER || gameState != RACE_WON)
 		{
 			var key = e.keyCode ? e.keyCode : e.which;
 
@@ -174,7 +174,7 @@ function DrawGame()
 	snail3.Draw(ctx);
 	
 	if (gameState == RACE_WON)
-	{
+	{	
 		if (winningImg!= null)
 		{
 			ctx.drawImage(winningImg, canvas.width/2 - winningImg.width/2, canvas.height/2 - winningImg.height/2);
