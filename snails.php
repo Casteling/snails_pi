@@ -114,9 +114,11 @@ function OnLoad()
 
 	window.onkeyup = function(e) 
 	{
+		var key = e.keyCode ? e.keyCode : e.which;
+		
 		if (gameState == PLAYING)
 		{
-			var key = e.keyCode ? e.keyCode : e.which;
+			
 
 			//if (key == 71) 
 			//{ //'g'
